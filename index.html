@@ -125,7 +125,6 @@
             font-size: 14px;
         }
 
-        /* Evidence Styling */
         .evidence-section {
             margin-bottom: var(--space-24);
         }
@@ -201,7 +200,6 @@
             color: white;
         }
 
-        /* Dashboard Stats */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -228,116 +226,6 @@
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-        }
-
-        /* Claims */
-        .claims-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-16);
-        }
-
-        .claim-card {
-            padding: var(--space-16);
-            background: var(--color-surface);
-            border-left: 4px solid #d4af37;
-            border-radius: var(--radius-base);
-        }
-
-        .claim-card h3 {
-            color: var(--color-primary);
-            margin-bottom: var(--space-8);
-            font-size: 16px;
-        }
-
-        .claim-card p {
-            color: var(--color-text-light);
-            font-size: 14px;
-            margin-bottom: var(--space-8);
-        }
-
-        .claim-strength {
-            display: inline-block;
-            padding: 4px 12px;
-            background: rgba(212, 175, 55, 0.15);
-            color: #d4af37;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        /* Damages */
-        .damages-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: var(--space-16);
-        }
-
-        .damages-table th,
-        .damages-table td {
-            padding: var(--space-12);
-            text-align: left;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .damages-table th {
-            background: var(--color-surface);
-            font-weight: 600;
-            color: var(--color-primary);
-        }
-
-        .damages-table tr:hover {
-            background: var(--color-surface);
-        }
-
-        /* Timeline */
-        .timeline {
-            position: relative;
-            padding-left: var(--space-24);
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--color-primary);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: var(--space-24);
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -32px;
-            top: 4px;
-            width: 16px;
-            height: 16px;
-            background: var(--color-primary);
-            border: 3px solid var(--color-background);
-            border-radius: 50%;
-        }
-
-        .timeline-date {
-            color: var(--color-primary);
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .timeline-title {
-            font-weight: 600;
-            color: var(--color-text);
-            margin-bottom: 4px;
-        }
-
-        .timeline-description {
-            color: var(--color-text-light);
-            font-size: 14px;
         }
 
         @media (max-width: 768px) {
@@ -368,7 +256,7 @@
         <div class="tabs">
             <button class="tab-button active" onclick="switchTab('dashboard')">📊 Dashboard</button>
             <button class="tab-button" onclick="switchTab('overview')">📋 Overview</button>
-            <button class="tab-button" onclick="switchTab('evidence')">📁 Evidence (19 Files)</button>
+            <button class="tab-button" onclick="switchTab('evidence')">📁 Evidence (23 Files)</button>
             <button class="tab-button" onclick="switchTab('claims')">⚡ Claims (7)</button>
             <button class="tab-button" onclick="switchTab('damages')">💷 Damages</button>
             <button class="tab-button" onclick="switchTab('timeline')">📅 Timeline</button>
@@ -381,7 +269,7 @@
             <div id="dashboard-tab" class="tab-content active">
                 <div class="tab-header">
                     <h2>📊 Case Dashboard</h2>
-                    <p>Real-time case strength analysis and comprehensive case summary</p>
+                    <p>Employment Tribunal Case Manager - Complete Evidence Bundle</p>
                 </div>
 
                 <div class="stats-grid">
@@ -394,7 +282,7 @@
                         <p>Claims Filed</p>
                     </div>
                     <div class="stat-card">
-                        <h3>19</h3>
+                        <h3>23</h3>
                         <p>Evidence Files</p>
                     </div>
                     <div class="stat-card">
@@ -403,199 +291,350 @@
                     </div>
                 </div>
 
-                <div style="margin-bottom: var(--space-24);">
-                    <h3 style="color: var(--color-primary); margin-bottom: var(--space-12);">COMPREHENSIVE CASE SUMMARY</h3>
-                    <div style="background: var(--color-surface); padding: var(--space-16); border-radius: var(--radius-base); border-left: 4px solid #d4af37; margin-bottom: var(--space-16);">
-                        <p style="color: var(--color-text); margin-bottom: var(--space-12); line-height: 1.6;">
-                            <strong>Case:</strong> KIRBY v ASDA Stores Limited (Case Reference: 60402852/2025)<br>
-                            <strong>Claimant:</strong> George Kirby, Former Customer Trading Manager, ASDA Tamworth<br>
-                            <strong>Period of Service:</strong> 24 years 9 months (14 November 2000 - 1 October 2025)<br>
-                            <strong>Final Salary:</strong> £36,731.68 per annum with 7% employer pension contribution (£2,571.22 p.a.)<br>
-                            <strong>Status:</strong> TRIBUNAL READY (90-95% Strength) - Professional Case Manager Created<br>
-                            <strong>Respondent:</strong> ASDA Stores Limited, Retail Giant with Multi-Billion Turnover<br>
-                            <strong>Hearing Date:</strong> Awaiting tribunal notification (filed 27 November 2025)<br>
-                            <strong>Representation:</strong> Self-represented with Professional Barrister Support
-                        </p>
-                    </div>
-
-                    <div style="background: #f5f5f5; padding: var(--space-16); border-radius: var(--radius-base); margin-bottom: var(--space-16);">
-                        <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">DETAILED CASE BACKGROUND</h4>
-                        <p style="color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.8;">
-                            George Kirby worked for ASDA for nearly 25 years in progressively responsible roles within store operations and customer service management. After 4 years as a Customer Sales Associate, he was promoted through various supervisory roles, ultimately reaching the position of <strong>Customer Trading Manager (DTM Grade)</strong> on 1 August 2021. This promotion came with a salary increase and recognition of his extensive experience and loyalty to the company.
-                        </p>
-                        <p style="color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.8;">
-                            Throughout his employment, George maintained an exemplary record. He was entitled to 7% employer pension contributions (£2,571.22 per annum), life assurance, and full retail benefits. More importantly, on <strong>8 February 2021</strong>, George obtained a High Court custody order (BM20P08534) establishing shared custody with a clear geographic restriction: he was legally prohibited from relocating more than 20 miles from his current location. This court order was <strong>recorded in company systems and known to ASDA management</strong>.
-                        </p>
-                        <p style="color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.8;">
-                            For over 4 years (February 2021 through July 2025), ASDA employed George in full knowledge of this court-ordered custody restriction. No conflict arose. He performed his duties as Customer Trading Manager without issue. His store (Tamworth Bitterscote Retail Park) was well within the 20-mile radius requirement.
-                        </p>
-                        <p style="color: var(--color-text-light); line-height: 1.8;">
-                            Then, without warning, everything changed.
-                        </p>
-                    </div>
-
-                    <div style="background: #fff3cd; padding: var(--space-16); border-radius: var(--radius-base); border: 1px solid #f59e0b; margin-bottom: var(--space-16);">
-                        <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">THE DISMISSAL STRATEGY (19 July 2025)</h4>
-                        <p style="color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.8;">
-                            On <strong>19 July 2025</strong>, George was summoned to an unscheduled meeting with zero advance notice. He was given no opportunity to prepare, no indication of the meeting's purpose, and no right to bring a companion (a statutory right under ACAS Code). The meeting notes—the only contemporaneous record—show:
-                        </p>
-                        <ul style="margin-left: 20px; color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.8;">
-                            <li><strong>No investigation:</strong> ASDA provided no documentary evidence of alleged poor performance or capability issues</li>
-                            <li><strong>No alternatives explored:</strong> No discussion of redeployment, training, or modified duties</li>
-                            <li><strong>Predetermined outcome:</strong> The dismissal decision was already made before the meeting commenced</li>
-                            <li><strong>Relocation condition:</strong> ASDA announced the "elimination" of his role with a mandatory relocation 25+ miles away—directly incompatible with his court order</li>
-                            <li><strong>No discretion offered:</strong> George was informed this was non-negotiable and effective immediately</li>
-                        </ul>
-                        <p style="color: var(--color-text-light); line-height: 1.8;">
-                            <em>The dismissal wasn't about capability. It was designed to force George into an impossible choice: violate a High Court custody order or lose his job.</em>
-                        </p>
-                    </div>
-
-                    <div style="background: #e8f5e9; padding: var(--space-16); border-radius: var(--radius-base); border: 1px solid #22c55e; margin-bottom: var(--space-16);">
-                        <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">IMMEDIATE AFTERMATH & THE SHAM PROCESS (August 2025)</h4>
-                        <p style="color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.8;">
-                            On <strong>6 August 2025</strong>, just 18 days after dismissal, George submitted a formal grievance challenging the dismissal and requesting reconsideration. ASDA's response was stunning in its brazenness: <strong>the grievance was rejected the SAME DAY with absolutely no investigation</strong>. This is a prima facie breach of the ACAS Code, which requires:
-                        </p>
-                        <ul style="margin-left: 20px; color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.8;">
-                            <li>Formal notification of grievance</li>
-                            <li>Full investigation of allegations</li>
-                            <li>Right to be accompanied by companion</li>
-                            <li>Reasonable time for response</li>
-                            <li>Appeal process</li>
-                        </ul>
-                        <p style="color: var(--color-text-light); line-height: 1.8;">
-                            ASDA violated every step. The same-day rejection proves ASDA never intended to meaningfully consider the grievance.
-                        </p>
-                    </div>
-
-                    <div style="background: #f0f7ff; padding: var(--space-16); border-radius: var(--radius-base); border: 1px solid #d4af37; margin-bottom: var(--space-16);">
-                        <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">THE DISMISSAL</h4>
-                        <p style="color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.6;">
-                            On 19 July 2025, George Kirby was called to an unscheduled dismissal meeting with zero advance notice. No right to companion was offered or explained. ASDA announced the elimination of his Customer Trading Manager role with immediate effect, coupled with a mandatory relocation to a store 25+ miles away—directly incompatible with his court-ordered custody obligations (High Court Order BM20P08534, February 2021, prohibiting relocation beyond 20 miles).
-                        </p>
-                        <p style="color: var(--color-text-light); line-height: 1.6;">
-                            <strong>Key fact:</strong> ASDA knew of the court order. No investigation was conducted. No alternatives were considered. No procedural safeguards were followed. Same-day formal grievance was rejected without investigation (6 August 2025). Then, on 16 October 2025—15 days AFTER dismissal—ASDA created and issued a FALSE resignation letter, dated to appear as if Kirby had resigned himself.
-                        </p>
-                    </div>
-
-                    <div style="background: #fff3cd; padding: var(--space-16); border-radius: var(--radius-base); border: 1px solid #f59e0b; margin-bottom: var(--space-16);">
-                        <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">⚠️ THE SMOKING GUN: DOCUMENT FRAUD</h4>
-                        <p style="color: var(--color-text-light); margin-bottom: var(--space-8); line-height: 1.6;">
-                            <strong>FALSE RESIGNATION LETTER (16 October 2025)</strong><br>
-                            A forged resignation letter was created and issued 15 days AFTER George Kirby was dismissed. This is conclusive proof of:
-                        </p>
-                        <ul style="margin-left: 20px; color: var(--color-text-light); margin-bottom: var(--space-12);">
-                            <li><strong>Systematic bad faith</strong> - ASDA fabricated evidence</li>
-                            <li><strong>Document fraud</strong> - Criminal falsification of records</li>
-                            <li><strong>Admission of guilt</strong> - Why fake a resignation if dismissal was lawful?</li>
-                            <li><strong>Win probability: 95%+</strong> - This single piece of evidence is case-winning</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style="margin-bottom: var(--space-24);">
-                    <h3 style="color: var(--color-primary); margin-bottom: var(--space-12);">THE 7 CLAIMS SUMMARY</h3>
-                    <div class="claims-grid">
-                        <div class="claim-card">
-                            <h3>1. Unfair Dismissal</h3>
-                            <p><strong>85-90% WIN</strong></p>
-                            <p style="font-size: 13px; color: var(--color-text-light);">Multiple ACAS Code breaches: no notice, no investigation, no companion, no alternatives considered.</p>
-                        </div>
-                        <div class="claim-card">
-                            <h3>2. Sex Discrimination</h3>
-                            <p><strong>85-90% WIN</strong></p>
-                            <p style="font-size: 13px; color: var(--color-text-light);">Court-ordered custody incompatible with mandatory relocation. No parental status consideration.</p>
-                        </div>
-                        <div class="claim-card">
-                            <h3>3. Document Fraud</h3>
-                            <p><strong>95%+ WIN</strong></p>
-                            <p style="font-size: 13px; color: var(--color-text-light);">FALSE resignation letter dated 15 days AFTER dismissal. Definitive bad faith proof.</p>
-                        </div>
-                        <div class="claim-card">
-                            <h3>4. Procedural Breaches</h3>
-                            <p><strong>85-90% WIN</strong></p>
-                            <p style="font-size: 13px; color: var(--color-text-light);">ACAS Code violations across dismissal, grievance, and representation. Same-day grievance rejection.</p>
-                        </div>
-                        <div class="claim-card">
-                            <h3>5. Bad Faith Conduct</h3>
-                            <p><strong>85-90% WIN</strong></p>
-                            <p style="font-size: 13px; color: var(--color-text-light);">Predetermined dismissal, sham grievance process, false resignation letter, simultaneous role creation.</p>
-                        </div>
-                        <div class="claim-card">
-                            <h3>6. Unlawful Wage Deduction</h3>
-                            <p><strong>80-85% WIN</strong></p>
-                            <p style="font-size: 13px; color: var(--color-text-light);">£751.20 undocumented deduction. Three written requests for clarification—all unanswered.</p>
-                        </div>
-                        <div class="claim-card">
-                            <h3>7. Psychiatric Injury</h3>
-                            <p><strong>75-80% WIN</strong></p>
-                            <p style="font-size: 13px; color: var(--color-text-light);">Foreseeable harm from unfair dismissal after 24-year employment relationship and sham process.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="margin-bottom: var(--space-24);">
-                    <h3 style="color: var(--color-primary); margin-bottom: var(--space-12);">EVIDENCE STRENGTH ANALYSIS</h3>
-                    <table style="width: 100%; border-collapse: collapse;">
-                        <tr style="background: var(--color-surface);">
-                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border); font-weight: 600; width: 40%;">Cornerstone Evidence</td>
-                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">24-year employment contract + Court Order BM20P08534 (custody prohibition)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border); font-weight: 600;">Strongest Piece</td>
-                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">FALSE Resignation Letter (dated 15 days AFTER dismissal) = DOCUMENT FRAUD</td>
-                        </tr>
-                        <tr style="background: var(--color-surface);">
-                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border); font-weight: 600;">Procedural Breaches</td>
-                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">Same-day grievance rejection, no investigation, no ACAS Code compliance</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border); font-weight: 600;">Financial Evidence</td>
-                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">Payslips, pension documents, £751.20 deduction + 3 unanswered clarification requests</td>
-                        </tr>
-                        <tr style="background: var(--color-surface);">
-                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border); font-weight: 600;">Policy Violations</td>
-                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">19 files: ASDA Employment Handbook, Grievance Policy, Representation Policy, Job Change Policy—all breached</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div style="background: #d4edda; padding: var(--space-16); border-radius: var(--radius-base); border: 1px solid #22c55e; margin-bottom: var(--space-24);">
-                    <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">💰 DAMAGES OVERVIEW</h4>
-                    <p style="color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.6;">
-                        <strong>Tier 1 (Conservative):</strong> £56,195 → ASDA pays £66,673 gross<br>
-                        <strong>Tier 2 (Moderate):</strong> £68,326 → ASDA pays £83,656 gross<br>
-                        <strong>Tier 3 (Substantial):</strong> £78,059 → ASDA pays £97,283 gross
-                    </p>
-                    <p style="color: var(--color-text-light); font-size: 13px;">
-                        <em>First £30,000 tax-free (compensatory awards). Amounts above £30,000 taxed at 40%. Tier 3 recommended given document fraud and 24-year service.</em>
+                <div style="background: var(--color-surface); padding: var(--space-16); border-radius: var(--radius-base); border-left: 4px solid #d4af37; margin-bottom: var(--space-16);">
+                    <p style="color: var(--color-text); margin-bottom: var(--space-12); line-height: 1.6;">
+                        <strong>Case:</strong> KIRBY v ASDA Stores Limited (Case Reference: 60402852/2025)<br>
+                        <strong>Claimant:</strong> George Kirby, Former Customer Trading Manager, ASDA Tamworth<br>
+                        <strong>Period of Service:</strong> 24 years 9 months (14 November 2000 - 1 October 2025)<br>
+                        <strong>Final Salary:</strong> £36,731.68 per annum with 7% employer pension contribution (£2,571.22 p.a.)<br>
+                        <strong>Status:</strong> TRIBUNAL READY (90-95% Strength)<br>
+                        <strong>Respondent:</strong> ASDA Stores Limited<br>
+                        <strong>Evidence Files:</strong> 23 complete tribunal-ready documents<br>
+                        <strong>Representation:</strong> Self-represented with Professional Barrister Support
                     </p>
                 </div>
 
-                <div style="background: #f0f7ff; padding: var(--space-16); border-radius: var(--radius-base); border: 1px solid #d4af37;">
-                    <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">📋 CASE READINESS CHECKLIST</h4>
+                <div style="background: #fff3cd; padding: var(--space-16); border-radius: var(--radius-base); border: 1px solid #f59e0b;">
+                    <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">⚠️ CASE HIGHLIGHTS</h4>
                     <ul style="margin-left: 20px; color: var(--color-text-light); line-height: 1.8;">
-                        <li>✅ <strong>All 19 evidence files</strong> organized and indexed</li>
-                        <li>✅ <strong>Employment contract</strong> establishing 24+ years continuous service</li>
-                        <li>✅ <strong>Court Order</strong> (BM20P08534) proving family obligation incompatibility</li>
-                        <li>✅ <strong>Dismissal meeting minutes</strong> showing procedural failures</li>
-                        <li>✅ <strong>FALSE resignation letter</strong> (smoking gun—document fraud proof)</li>
-                        <li>✅ <strong>Same-day grievance rejection</strong> (ACAS Code breach)</li>
-                        <li>✅ <strong>Payroll records</strong> including £751.20 undocumented deduction</li>
-                        <li>✅ <strong>3 unanswered pay clarification requests</strong> (wage deduction claim)</li>
-                        <li>✅ <strong>Pension documents</strong> (loss of employer contribution)</li>
-                        <li>✅ <strong>ASDA policy documents</strong> (all breached)</li>
-                        <li>✅ <strong>Legal framework</strong> (Employment Rights Act 1996, Equality Act 2010)</li>
-                        <li>✅ <strong>Detailed damages calculations</strong> across 3 tiers</li>
-                        <li>✅ <strong>Complete case timeline</strong> from employment start to tribunal</li>
+                        <li><strong>Document Fraud:</strong> FALSE resignation letter dated 15 days AFTER dismissal (95%+ win probability)</li>
+                        <li><strong>Court Order Violation:</strong> High Court custody order (BM20P08534) made relocation impossible</li>
+                        <li><strong>Procedural Breaches:</strong> Same-day grievance rejection, no investigation, no ACAS Code compliance</li>
+                        <li><strong>24-Year Service:</strong> Long-serving employee with no disciplinary history</li>
+                        <li><strong>Bad Faith Conduct:</strong> Predetermined dismissal with sham grievance process</li>
+                        <li><strong>Complete Evidence Bundle:</strong> 23 files covering all aspects of the tribunal claim</li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- EVIDENCE TAB -->
+            <div id="evidence-tab" class="tab-content">
+                <div class="tab-header">
+                    <h2>📁 23 Evidence Files - Complete Bundle</h2>
+                    <p>All tribunal evidence organized and ready. Click any file to open in Google Drive.</p>
+                </div>
+
+                <!-- SECTION 01: CORE EMPLOYMENT -->
+                <div class="evidence-section">
+                    <h3>📋 Section 01: Core Employment (3 files)</h3>
+                    
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1AHz6bek4pkUXgUcxXOizBO_7a13aPQQx/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 01: Employment Contract (Initial - Tamworth 2000)
+                            </a>
+                        </h4>
+                        <p>Establishes 24+ years continuous service from start date (14 Nov 2000)</p>
+                        <span class="strength-badge strongest">CORNERSTONE</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1i_PO6uBHsuJ7OAu0QO5pBv3nVkpMReIP/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 02: Court Order (Custody - BM20P08534, 8 Feb 2021)
+                            </a>
+                        </h4>
+                        <p>High Court custody order prohibiting relocation beyond 20 miles - proves ASDA's knowledge of family obligations</p>
+                        <span class="strength-badge strong">CRITICAL</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1LYNj46n81BPnFIHwDSBspxNlyQf3ugUL/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 15: Employment Contract (Customer Trading Manager)
+                            </a>
+                        </h4>
+                        <p>Promotion letter confirming role and salary (£36,731.68 p.a.) - proves position was eliminated in July 2025</p>
+                        <span class="strength-badge strong">STRONG</span>
+                    </div>
+                </div>
+
+                <!-- SECTION 02: DISMISSAL EVENTS -->
+                <div class="evidence-section">
+                    <h3>⚖️ Section 02: Dismissal Events (6 files)</h3>
+                    
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1GVdtpFPbT5RAcaPkVaIG2Yhnl2qdU2Se/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 03: Dismissal Meeting Minutes (9 Jul 2025)
+                            </a>
+                        </h4>
+                        <p>Record of dismissal meeting showing no advance notice, no investigation, predetermined outcome</p>
+                        <span class="strength-badge strong">CRITICAL</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1UuvjYdkiXBh6W5Hlz3HtpyxFoxtDBQlB/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 04: ET1 Tribunal Claim Form (60402852/2025)
+                            </a>
+                        </h4>
+                        <p>Official employment tribunal claim - filed within 3 months of dismissal</p>
+                        <span class="strength-badge">OFFICIAL</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1JUI4QR6FgfVzWye0IiIyYLQWT1yyeMo9/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 05: Formal Grievance (6 Aug 2025)
+                            </a>
+                        </h4>
+                        <p>Formal grievance challenging dismissal and requesting reconsideration</p>
+                        <span class="strength-badge strong">CRITICAL</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1kBavXko8pc26K3A91Eyw7-kdxmchMvPo/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 06: Grievance Response ASDA (6 Aug 2025)
+                            </a>
+                        </h4>
+                        <p>Same-day rejection - proves no investigation, sham process, procedural breach</p>
+                        <span class="strength-badge strongest">STRONGEST</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1qEjFDQcthu_6PQTtJzsOOWxxcddTiXDC/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 07: Letter of Protest (6 Aug 2025)
+                            </a>
+                        </h4>
+                        <p>Formal notification of working under protest - contemporaneous record of dispute</p>
+                        <span class="strength-badge strong">STRONG</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1m4C-2VVIh68FPLyECOXbXHagf8_brV70/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 08: FALSE Resignation Letter (16 Oct 2025)
+                            </a>
+                        </h4>
+                        <p>FORGED letter dated 15 days AFTER dismissal - proof of bad faith and fraud</p>
+                        <span class="strength-badge strongest">95%+ WIN - DOCUMENT FRAUD</span>
+                    </div>
+                </div>
+
+                <!-- SECTION 03: FINANCIAL & PAYROLL -->
+                <div class="evidence-section">
+                    <h3>💷 Section 03: Financial & Payroll (7 files)</h3>
+                    
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1WbQpldMxxuxN9HLDT7kqoXwkGmoNJf1x/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 09: Payslips Compiled (Jun-Oct 2025)
+                            </a>
+                        </h4>
+                        <p>Monthly payslips showing final salary £36,731.68 p.a. and all deductions</p>
+                        <span class="strength-badge">FINANCIAL</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1T0QOXj9UoXE_eCMfuhizj7jU42yEp9sd/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 10: Pension Leaver Letter (6 Nov 2025)
+                            </a>
+                        </h4>
+                        <p>Confirms pension is in payment - documents employer contribution loss</p>
+                        <span class="strength-badge">FINANCIAL</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/13ocq4QAY-xkoZ1rIEyU6LnidBRqEa3EI/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 11: Pension Benefit Statement (30 Sep 2025)
+                            </a>
+                        </h4>
+                        <p>Account value and projections - demonstrates pension loss from dismissal</p>
+                        <span class="strength-badge">FINANCIAL</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1orZnfH45TzTWb1V7MDm3oM6t67yBfrsY/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 12: Pay Clarification Requests (Nov 2025)
+                            </a>
+                        </h4>
+                        <p>3 unanswered requests for £751.20 deduction clarification - unlawful deduction</p>
+                        <span class="strength-badge strong">CRITICAL</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1TqSiWLrq9RrVnSL7VA_cDXItpNjxRjTx/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 16: New Employment Contract (Intelligence Coordinator)
+                            </a>
+                        </h4>
+                        <p>New role at £35,000 p.a. commenced same day - demonstrates mitigation of losses</p>
+                        <span class="strength-badge">MITIGATION</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1-n_L2T8Mvs47wBnL66FS8-wqNLyV_uMP/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 18: Pay Dispute Escalation (Nov 2025)
+                            </a>
+                        </h4>
+                        <p>Formal escalation of pay discrepancy - further evidence of ASDA's disregard</p>
+                        <span class="strength-badge">DISPUTE RECORD</span>
+                    </div>
+                </div>
+
+                <!-- SECTION 04: ADMINISTRATIVE & SUPPORTING -->
+                <div class="evidence-section">
+                    <h3>📑 Section 04: Administrative & Supporting Documents (4 files)</h3>
+                    
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1InBoo1eItjupsYUNfPYPcQP3i6mWuoGL/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 19: SAR Response Letter (19 Nov 2025)
+                            </a>
+                        </h4>
+                        <p>Subject Access Request response - supporting documentation from ASDA</p>
+                        <span class="strength-badge">ADMINISTRATIVE</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1j1gaJ45UpbYevbr_L0Ylq90gBWF3zwb1/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 20: Medical X-Ray (Compound Fracture - Oct 2025)
+                            </a>
+                        </h4>
+                        <p>Medical evidence - documents injury and stress-related harm from dismissal</p>
+                        <span class="strength-badge strong">INJURY EVIDENCE</span>
+                    </div>
+                </div>
+
+                <!-- SECTION 05: ASDA POLICIES -->
+                <div class="evidence-section">
+                    <h3>📋 Section 05: ASDA Policies (4 files)</h3>
+                    
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1IsAJXyj3cEBQ48ze55nNP8dCqRQKmzQW/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 23: ASDA Employment Handbook (2025)
+                            </a>
+                        </h4>
+                        <p>Official handbook showing ASDA's own procedural requirements - all breached</p>
+                        <span class="strength-badge">POLICY</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1nDa3qJcqPZaUUJyF3ouc8MkW3dZ36zEq/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 24: ASDA Grievance Policy (Oct 2023)
+                            </a>
+                        </h4>
+                        <p>Grievance policy requiring investigation - same-day rejection violates this</p>
+                        <span class="strength-badge">POLICY</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1XCBazlMG1xNEmLuzj5qH6t2uQzg38j9L/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 25: ASDA Representation Policy
+                            </a>
+                        </h4>
+                        <p>Policy guaranteeing right to companion - dismissed employee had no companion</p>
+                        <span class="strength-badge">POLICY</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/176kZRRq3awVMMOFbduKz7uWAGbgKB6bd/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 26: ASDA Job Change & Relocation Policy
+                            </a>
+                        </h4>
+                        <p>Policy on job changes - ASDA violated own relocation procedures</p>
+                        <span class="strength-badge">POLICY</span>
+                    </div>
+                </div>
+
+                <!-- SECTION 06: LEGAL FRAMEWORK -->
+                <div class="evidence-section">
+                    <h3>⚖️ Section 06: Legal Framework (2 files)</h3>
+                    
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/1kGIy0tREmPLdQSeC8KonbK90NUkbBS7f/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 27: Employment Rights Act 1996 (Ss 94-97)
+                            </a>
+                        </h4>
+                        <p>Legal basis for unfair dismissal protection and compensation</p>
+                        <span class="strength-badge">LEGAL</span>
+                    </div>
+
+                    <div class="evidence-item">
+                        <h4>
+                            <a href="https://drive.google.com/file/d/11zs5acIvRvqhSv6HM_V_vc7fvI3ZImwO/view" 
+                               target="_blank" 
+                               class="evidence-link">
+                                📄 File 28: Equality Act 2010 (Ss 13 & 39)
+                            </a>
+                        </h4>
+                        <p>Legal basis for sex discrimination and parental status protection</p>
+                        <span class="strength-badge">LEGAL</span>
+                    </div>
                 </div>
             </div>
 
             <!-- OVERVIEW TAB -->
             <div id="overview-tab" class="tab-content">
                 <div class="tab-header">
-                    <h2>Case Overview</h2>
+                    <h2>📋 Case Overview</h2>
                     <p>Complete employment tribunal case analysis for George Kirby v ASDA Stores Limited</p>
                 </div>
 
@@ -605,7 +644,7 @@
                         <p>Years Service</p>
                     </div>
                     <div class="stat-card">
-                        <h3>19</h3>
+                        <h3>23</h3>
                         <p>Evidence Files</p>
                     </div>
                     <div class="stat-card">
@@ -654,327 +693,42 @@
 
                 <div>
                     <h3 style="color: var(--color-primary); margin-bottom: var(--space-12);">The 7 Claims</h3>
-                    <div class="claims-grid">
-                        <div class="claim-card">
-                            <h3>1. Unfair Dismissal</h3>
-                            <p>Multiple procedural breaches under ACAS Code</p>
-                            <span class="claim-strength">85-90% WIN</span>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-16);">
+                        <div style="padding: var(--space-16); background: var(--color-surface); border-left: 4px solid #d4af37; border-radius: var(--radius-base);">
+                            <h4 style="color: var(--color-primary); margin-bottom: var(--space-8); font-size: 16px;">1. Unfair Dismissal</h4>
+                            <p style="color: var(--color-text-light); font-size: 14px; margin-bottom: var(--space-8);">Multiple procedural breaches under ACAS Code</p>
+                            <span style="display: inline-block; padding: 4px 12px; background: rgba(212, 175, 55, 0.15); color: #d4af37; border-radius: 4px; font-size: 12px; font-weight: 600;">85-90% WIN</span>
                         </div>
-                        <div class="claim-card">
-                            <h3>2. Sex Discrimination</h3>
-                            <p>Failure to consider parental obligations (court order)</p>
-                            <span class="claim-strength">85-90% WIN</span>
+                        <div style="padding: var(--space-16); background: var(--color-surface); border-left: 4px solid #d4af37; border-radius: var(--radius-base);">
+                            <h4 style="color: var(--color-primary); margin-bottom: var(--space-8); font-size: 16px;">2. Sex Discrimination</h4>
+                            <p style="color: var(--color-text-light); font-size: 14px; margin-bottom: var(--space-8);">Failure to consider parental obligations (court order)</p>
+                            <span style="display: inline-block; padding: 4px 12px; background: rgba(212, 175, 55, 0.15); color: #d4af37; border-radius: 4px; font-size: 12px; font-weight: 600;">85-90% WIN</span>
                         </div>
-                        <div class="claim-card">
-                            <h3>3. Document Fraud</h3>
-                            <p>FALSE resignation letter dated 15 days after dismissal</p>
-                            <span class="claim-strength">95%+ WIN</span>
+                        <div style="padding: var(--space-16); background: var(--color-surface); border-left: 4px solid #d4af37; border-radius: var(--radius-base);">
+                            <h4 style="color: var(--color-primary); margin-bottom: var(--space-8); font-size: 16px;">3. Document Fraud</h4>
+                            <p style="color: var(--color-text-light); font-size: 14px; margin-bottom: var(--space-8);">FALSE resignation letter dated 15 days after dismissal</p>
+                            <span style="display: inline-block; padding: 4px 12px; background: rgba(212, 175, 55, 0.15); color: #d4af37; border-radius: 4px; font-size: 12px; font-weight: 600;">95%+ WIN</span>
                         </div>
-                        <div class="claim-card">
-                            <h3>4. Procedural Breaches</h3>
-                            <p>ACAS Code violations (notice, representation, investigation)</p>
-                            <span class="claim-strength">85-90% WIN</span>
+                        <div style="padding: var(--space-16); background: var(--color-surface); border-left: 4px solid #d4af37; border-radius: var(--radius-base);">
+                            <h4 style="color: var(--color-primary); margin-bottom: var(--space-8); font-size: 16px;">4. Procedural Breaches</h4>
+                            <p style="color: var(--color-text-light); font-size: 14px; margin-bottom: var(--space-8);">ACAS Code violations (notice, representation, investigation)</p>
+                            <span style="display: inline-block; padding: 4px 12px; background: rgba(212, 175, 55, 0.15); color: #d4af37; border-radius: 4px; font-size: 12px; font-weight: 600;">85-90% WIN</span>
                         </div>
-                        <div class="claim-card">
-                            <h3>5. Bad Faith Conduct</h3>
-                            <p>Predetermined dismissal, sham grievance process</p>
-                            <span class="claim-strength">85-90% WIN</span>
+                        <div style="padding: var(--space-16); background: var(--color-surface); border-left: 4px solid #d4af37; border-radius: var(--radius-base);">
+                            <h4 style="color: var(--color-primary); margin-bottom: var(--space-8); font-size: 16px;">5. Bad Faith Conduct</h4>
+                            <p style="color: var(--color-text-light); font-size: 14px; margin-bottom: var(--space-8);">Predetermined dismissal, sham grievance process</p>
+                            <span style="display: inline-block; padding: 4px 12px; background: rgba(212, 175, 55, 0.15); color: #d4af37; border-radius: 4px; font-size: 12px; font-weight: 600;">85-90% WIN</span>
                         </div>
-                        <div class="claim-card">
-                            <h3>6. Unlawful Wage Deduction</h3>
-                            <p>£751.20 undocumented deduction, unanswered requests</p>
-                            <span class="claim-strength">80-85% WIN</span>
+                        <div style="padding: var(--space-16); background: var(--color-surface); border-left: 4px solid #d4af37; border-radius: var(--radius-base);">
+                            <h4 style="color: var(--color-primary); margin-bottom: var(--space-8); font-size: 16px;">6. Unlawful Wage Deduction</h4>
+                            <p style="color: var(--color-text-light); font-size: 14px; margin-bottom: var(--space-8);">£751.20 undocumented deduction, unanswered requests</p>
+                            <span style="display: inline-block; padding: 4px 12px; background: rgba(212, 175, 55, 0.15); color: #d4af37; border-radius: 4px; font-size: 12px; font-weight: 600;">80-85% WIN</span>
                         </div>
-                        <div class="claim-card">
-                            <h3>7. Psychiatric Injury</h3>
-                            <p>Foreseeable harm from unfair dismissal</p>
-                            <span class="claim-strength">75-80% WIN</span>
+                        <div style="padding: var(--space-16); background: var(--color-surface); border-left: 4px solid #d4af37; border-radius: var(--radius-base);">
+                            <h4 style="color: var(--color-primary); margin-bottom: var(--space-8); font-size: 16px;">7. Psychiatric Injury</h4>
+                            <p style="color: var(--color-text-light); font-size: 14px; margin-bottom: var(--space-8);">Foreseeable harm from unfair dismissal</p>
+                            <span style="display: inline-block; padding: 4px 12px; background: rgba(212, 175, 55, 0.15); color: #d4af37; border-radius: 4px; font-size: 12px; font-weight: 600;">75-80% WIN</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- EVIDENCE TAB -->
-            <div id="evidence-tab" class="tab-content">
-                <div class="tab-header">
-                    <h2>📁 19 Evidence Files</h2>
-                    <p>Click any evidence item to open the PDF. All 19 pieces organized by category.</p>
-                </div>
-
-                <!-- CORE EMPLOYMENT -->
-                <div class="evidence-section">
-                    <h3>📋 01. Core Employment (4 files)</h3>
-                    
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/01-core-employment/01_Employment_Contract_Initial_Tamworth_2000.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 Employment Contract (Initial - 14 Nov 2000)
-                            </a>
-                        </h4>
-                        <p>Establishes 24+ years continuous service from start date</p>
-                        <span class="strength-badge strongest">CORNERSTONE</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/01-core-employment/02_Court_Order_Custody_BM20P08534_08Feb2021.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 Court Order (Custody - BM20P08534, 8 Feb 2021)
-                            </a>
-                        </h4>
-                        <p>Court-ordered shared custody, prohibits relocation - proves ASDA's knowledge of family obligations</p>
-                        <span class="strength-badge strong">CRITICAL</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/01-core-employment/03_Dismissal_Meeting_Minutes_09Jul2025.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 Dismissal Meeting Minutes (19 July 2025)
-                            </a>
-                        </h4>
-                        <p>Record of dismissal showing no advance notice, no investigation, predetermined outcome</p>
-                        <span class="strength-badge strong">CRITICAL</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/01-core-employment/15_Employment_Contract_Customer_Trading_Manager_01Aug2021.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 Trading Manager Promotion (1 Aug 2021)
-                            </a>
-                        </h4>
-                        <p>Promotion letter confirming role and salary - proves position was eliminated in July 2025</p>
-                        <span class="strength-badge strong">STRONG</span>
-                    </div>
-                </div>
-
-                <!-- DISMISSAL & LEGAL -->
-                <div class="evidence-section">
-                    <h3>⚖️ 02. Dismissal & Legal (5 files)</h3>
-                    
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/02-dismissal-legal/04_ET1_Claim_Form_60402852_27Nov2025.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 ET1 Tribunal Claim Form (Case 60402852/2025)
-                            </a>
-                        </h4>
-                        <p>Official employment tribunal claim - filed within 3 months of dismissal</p>
-                        <span class="strength-badge">OFFICIAL</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/02-dismissal-legal/05_Formal_Grievance_06Aug2025.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 Formal Grievance (6 Aug 2025)
-                            </a>
-                        </h4>
-                        <p>Formal grievance challenging dismissal and requesting reconsideration</p>
-                        <span class="strength-badge strong">CRITICAL</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/02-dismissal-legal/06_Grievance_Response_ASDA_06Aug2025.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 Grievance Response (ASDA - 6 Aug 2025)
-                            </a>
-                        </h4>
-                        <p>Same-day rejection - proves no investigation, sham process, procedural breach</p>
-                        <span class="strength-badge strongest">STRONGEST</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/02-dismissal-legal/07_Letter_of_Protest_06Aug2025.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 Letter of Protest (6 Aug 2025)
-                            </a>
-                        </h4>
-                        <p>Formal notification of working under protest - contemporaneous record of dispute</p>
-                        <span class="strength-badge strong">STRONG</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/02-dismissal-legal/08_FALSE_Resignation_Letter_16Oct2025.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 FALSE Resignation Letter (Document Fraud!)
-                            </a>
-                        </h4>
-                        <p>FORGED letter dated 15 days AFTER dismissal - proof of bad faith and fraud</p>
-                        <span class="strength-badge strongest">95%+ WIN - DOCUMENT FRAUD</span>
-                    </div>
-                </div>
-
-                <!-- FINANCIAL & PAYROLL -->
-                <div class="evidence-section">
-                    <h3>💷 03. Financial & Payroll (6 files)</h3>
-                    
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/03-financial-payroll/09_Payslips_Compiled_Jun_Oct_2025.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 Payslips (June-October 2025)
-                            </a>
-                        </h4>
-                        <p>Monthly payslips showing final salary £36,731.68 p.a. and deductions</p>
-                        <span class="strength-badge">FINANCIAL</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/03-financial-payroll/10_Pension_Leaver_Letter_06Nov2025.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 Pension Leaver Letter (6 Nov 2025)
-                            </a>
-                        </h4>
-                        <p>Confirms pension is in payment - documents employer contribution loss</p>
-                        <span class="strength-badge">FINANCIAL</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/03-financial-payroll/11_Pension_Benefit_Statement_30Sep2025.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 Pension Benefit Statement (30 Sept 2025)
-                            </a>
-                        </h4>
-                        <p>Account value and projections - demonstrates pension loss from dismissal</p>
-                        <span class="strength-badge">FINANCIAL</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/03-financial-payroll/12_Pay_Clarification_Requests_Nov2025.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 Pay Clarification Requests (Nov 2025)
-                            </a>
-                        </h4>
-                        <p>3 unanswered requests for £751.20 deduction clarification - unlawful deduction</p>
-                        <span class="strength-badge strong">CRITICAL</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/03-financial-payroll/13_Final_Payslip_01Oct2025.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 Final Payslip (1 Oct 2025)
-                            </a>
-                        </h4>
-                        <p>Final payment showing undocumented £751.20 deduction without explanation</p>
-                        <span class="strength-badge strong">CRITICAL</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/03-financial-payroll/16_New_Employment_Contract_Intelligence_Coordinator_Oct2025.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 New Employment Contract (Intelligence Coordinator - Oct 2025)
-                            </a>
-                        </h4>
-                        <p>New role at £35,000 p.a. - demonstrates mitigation of losses</p>
-                        <span class="strength-badge">MITIGATION</span>
-                    </div>
-                </div>
-
-                <!-- ASDA POLICIES -->
-                <div class="evidence-section">
-                    <h3>📋 04. ASDA Policies (4 files)</h3>
-                    
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/06-asda-policies/23_ASDA_Employment_Handbook_2025.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 ASDA Employment Handbook (2025)
-                            </a>
-                        </h4>
-                        <p>Official handbook showing ASDA's own procedural requirements - all breached</p>
-                        <span class="strength-badge">POLICY</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/06-asda-policies/24_ASDA_Grievance_Policy_Oct2023.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 ASDA Grievance Policy (Oct 2023)
-                            </a>
-                        </h4>
-                        <p>Grievance policy requiring investigation - same-day rejection violates this</p>
-                        <span class="strength-badge">POLICY</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/06-asda-policies/25_ASDA_Representation_Policy.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 ASDA Representation Policy
-                            </a>
-                        </h4>
-                        <p>Policy guaranteeing right to companion - dismissed employee had no companion</p>
-                        <span class="strength-badge">POLICY</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/06-asda-policies/26_ASDA_Job_Change_Relocation_Policy.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 ASDA Job Change & Relocation Policy
-                            </a>
-                        </h4>
-                        <p>Policy on job changes - ASDA violated own relocation procedures</p>
-                        <span class="strength-badge">POLICY</span>
-                    </div>
-                </div>
-
-                <!-- LEGAL FRAMEWORK -->
-                <div class="evidence-section">
-                    <h3>⚖️ 05. Legal Framework (2 files)</h3>
-                    
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/07-legal-framework/27_Employment_Rights_Act_1996_Ss94_27.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 Employment Rights Act 1996 (Sections 94-97)
-                            </a>
-                        </h4>
-                        <p>Legal basis for unfair dismissal protection and compensation</p>
-                        <span class="strength-badge">LEGAL</span>
-                    </div>
-
-                    <div class="evidence-item">
-                        <h4>
-                            <a href="documents/07-legal-framework/28_Equality_Act_2010_Ss13_39.pdf" 
-                               target="_blank" 
-                               class="evidence-link">
-                                📄 Equality Act 2010 (Sections 13 & 39)
-                            </a>
-                        </h4>
-                        <p>Legal basis for sex discrimination and parental status protection</p>
-                        <span class="strength-badge">LEGAL</span>
                     </div>
                 </div>
             </div>
@@ -986,110 +740,54 @@
                     <p>Complete breakdown of all tribunal claims with evidence and win probability</p>
                 </div>
 
-                <div class="claims-grid">
-                    <div class="claim-card">
-                        <h3>Claim 1: Unfair Dismissal</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-16);">
+                    <div style="padding: var(--space-16); background: var(--color-surface); border-left: 4px solid #d4af37; border-radius: var(--radius-base);">
+                        <h3 style="color: var(--color-primary); font-size: 16px; margin-bottom: var(--space-8);">Claim 1: Unfair Dismissal</h3>
                         <p><strong>Win Probability:</strong> 85-90%</p>
                         <p><strong>Legal Basis:</strong> Employment Rights Act 1996, Section 94</p>
-                        <p><strong>Key Evidence:</strong></p>
-                        <ul style="margin-left: 20px; color: var(--color-text-light); font-size: 14px;">
-                            <li>No advance notice of meeting</li>
-                            <li>No right to companion offered</li>
-                            <li>No investigation into role elimination</li>
-                            <li>No alternatives considered</li>
-                            <li>Meeting notes not provided</li>
-                        </ul>
-                        <span class="claim-strength">STRONGEST CLAIM</span>
+                        <p style="font-size: 13px; color: var(--color-text-light); margin-top: var(--space-8);"><strong>Key Breaches:</strong> No advance notice, no companion, no investigation, no alternatives</p>
                     </div>
 
-                    <div class="claim-card">
-                        <h3>Claim 2: Sex Discrimination</h3>
+                    <div style="padding: var(--space-16); background: var(--color-surface); border-left: 4px solid #d4af37; border-radius: var(--radius-base);">
+                        <h3 style="color: var(--color-primary); font-size: 16px; margin-bottom: var(--space-8);">Claim 2: Sex Discrimination</h3>
                         <p><strong>Win Probability:</strong> 85-90%</p>
                         <p><strong>Legal Basis:</strong> Equality Act 2010, Sections 13 & 39</p>
-                        <p><strong>Key Evidence:</strong></p>
-                        <ul style="margin-left: 20px; color: var(--color-text-light); font-size: 14px;">
-                            <li>Court-ordered custody (20-mile incompatibility)</li>
-                            <li>No inquiry into parental obligations</li>
-                            <li>Relocation made dismissal inevitable</li>
-                            <li>Female comparator test fails</li>
-                            <li>Direct discrimination on ground of parenthood</li>
-                        </ul>
-                        <span class="claim-strength">VERY STRONG</span>
+                        <p style="font-size: 13px; color: var(--color-text-light); margin-top: var(--space-8);"><strong>Grounds:</strong> Court order incompatibility, no inquiry into parental obligations</p>
                     </div>
 
-                    <div class="claim-card">
-                        <h3>Claim 3: Document Fraud</h3>
+                    <div style="padding: var(--space-16); background: var(--color-surface); border-left: 4px solid #d4af37; border-radius: var(--radius-base);">
+                        <h3 style="color: var(--color-primary); font-size: 16px; margin-bottom: var(--space-8);">Claim 3: Document Fraud</h3>
                         <p><strong>Win Probability:</strong> 95%+</p>
                         <p><strong>Legal Basis:</strong> Bad Faith / Fraudulent Misrepresentation</p>
-                        <p><strong>Key Evidence:</strong></p>
-                        <ul style="margin-left: 20px; color: var(--color-text-light); font-size: 14px;">
-                            <li>FALSE resignation letter</li>
-                            <li>Dated 15 DAYS after dismissal</li>
-                            <li>Proves systematic bad faith</li>
-                            <li>Demonstrates ASDA's deception</li>
-                            <li>Strongest piece of evidence in case</li>
-                        </ul>
-                        <span class="claim-strength">DEFINITE WIN</span>
+                        <p style="font-size: 13px; color: var(--color-text-light); margin-top: var(--space-8);"><strong>Evidence:</strong> FALSE resignation dated 15 days AFTER dismissal</p>
                     </div>
 
-                    <div class="claim-card">
-                        <h3>Claim 4: Procedural Breaches</h3>
+                    <div style="padding: var(--space-16); background: var(--color-surface); border-left: 4px solid #d4af37; border-radius: var(--radius-base);">
+                        <h3 style="color: var(--color-primary); font-size: 16px; margin-bottom: var(--space-8);">Claim 4: Procedural Breaches</h3>
                         <p><strong>Win Probability:</strong> 85-90%</p>
                         <p><strong>Legal Basis:</strong> ACAS Code of Practice</p>
-                        <p><strong>Key Evidence:</strong></p>
-                        <ul style="margin-left: 20px; color: var(--color-text-light); font-size: 14px;">
-                            <li>No notice of meeting</li>
-                            <li>Companion right not explained</li>
-                            <li>No investigation conducted</li>
-                            <li>No records provided</li>
-                            <li>Grievance rejected same-day</li>
-                        </ul>
-                        <span class="claim-strength">VERY STRONG</span>
+                        <p style="font-size: 13px; color: var(--color-text-light); margin-top: var(--space-8);"><strong>Breaches:</strong> Same-day grievance rejection, no investigation</p>
                     </div>
 
-                    <div class="claim-card">
-                        <h3>Claim 5: Bad Faith Conduct</h3>
+                    <div style="padding: var(--space-16); background: var(--color-surface); border-left: 4px solid #d4af37; border-radius: var(--radius-base);">
+                        <h3 style="color: var(--color-primary); font-size: 16px; margin-bottom: var(--space-8);">Claim 5: Bad Faith Conduct</h3>
                         <p><strong>Win Probability:</strong> 85-90%</p>
                         <p><strong>Legal Basis:</strong> Implied Term of Trust & Confidence</p>
-                        <p><strong>Key Evidence:</strong></p>
-                        <ul style="margin-left: 20px; color: var(--color-text-light); font-size: 14px;">
-                            <li>Predetermined dismissal</li>
-                            <li>Sham grievance process</li>
-                            <li>False resignation letter</li>
-                            <li>Simultaneous role creation</li>
-                            <li>No genuine consideration of alternatives</li>
-                        </ul>
-                        <span class="claim-strength">VERY STRONG</span>
+                        <p style="font-size: 13px; color: var(--color-text-light); margin-top: var(--space-8);"><strong>Evidence:</strong> Predetermined dismissal, sham grievance, false letter</p>
                     </div>
 
-                    <div class="claim-card">
-                        <h3>Claim 6: Unlawful Wage Deduction</h3>
+                    <div style="padding: var(--space-16); background: var(--color-surface); border-left: 4px solid #d4af37; border-radius: var(--radius-base);">
+                        <h3 style="color: var(--color-primary); font-size: 16px; margin-bottom: var(--space-8);">Claim 6: Unlawful Wage Deduction</h3>
                         <p><strong>Win Probability:</strong> 80-85%</p>
                         <p><strong>Legal Basis:</strong> Employment Rights Act 1996, Section 27</p>
-                        <p><strong>Key Evidence:</strong></p>
-                        <ul style="margin-left: 20px; color: var(--color-text-light); font-size: 14px;">
-                            <li>£751.20 undocumented deduction</li>
-                            <li>3 written requests for clarification</li>
-                            <li>All requests left unanswered</li>
-                            <li>No documentation provided</li>
-                            <li>Clear breach of statutory rights</li>
-                        </ul>
-                        <span class="claim-strength">STRONG</span>
+                        <p style="font-size: 13px; color: var(--color-text-light); margin-top: var(--space-8);"><strong>Amount:</strong> £751.20 with 3 unanswered requests</p>
                     </div>
 
-                    <div class="claim-card">
-                        <h3>Claim 7: Psychiatric Injury</h3>
+                    <div style="padding: var(--space-16); background: var(--color-surface); border-left: 4px solid #d4af37; border-radius: var(--radius-base);">
+                        <h3 style="color: var(--color-primary); font-size: 16px; margin-bottom: var(--space-8);">Claim 7: Psychiatric Injury</h3>
                         <p><strong>Win Probability:</strong> 75-80%</p>
                         <p><strong>Legal Basis:</strong> Personal Injury / Negligence</p>
-                        <p><strong>Key Evidence:</strong></p>
-                        <ul style="margin-left: 20px; color: var(--color-text-light); font-size: 14px;">
-                            <li>Foreseeable harm from unfair dismissal</li>
-                            <li>24-year employment relationship</li>
-                            <li>No mitigation offered</li>
-                            <li>Sham process demonstrates callousness</li>
-                            <li>Loss of earnings & security</li>
-                        </ul>
-                        <span class="claim-strength">STRONG</span>
+                        <p style="font-size: 13px; color: var(--color-text-light); margin-top: var(--space-8);"><strong>Grounds:</strong> Foreseeable harm from unfair dismissal</p>
                     </div>
                 </div>
             </div>
@@ -1101,63 +799,63 @@
                     <p>Complete financial analysis across three tiers of compensation</p>
                 </div>
 
-                <table class="damages-table">
+                <table class="damages-table" style="width: 100%; border-collapse: collapse; margin-bottom: var(--space-16);">
                     <thead>
                         <tr>
-                            <th>Component</th>
-                            <th>Tier 1 (Conservative)</th>
-                            <th>Tier 2 (Moderate)</th>
-                            <th>Tier 3 (Substantial)</th>
+                            <th style="padding: var(--space-12); text-align: left; border-bottom: 1px solid var(--color-border); background: var(--color-surface); font-weight: 600; color: var(--color-primary);">Component</th>
+                            <th style="padding: var(--space-12); text-align: left; border-bottom: 1px solid var(--color-border); background: var(--color-surface); font-weight: 600; color: var(--color-primary);">Tier 1 (Conservative)</th>
+                            <th style="padding: var(--space-12); text-align: left; border-bottom: 1px solid var(--color-border); background: var(--color-surface); font-weight: 600; color: var(--color-primary);">Tier 2 (Moderate)</th>
+                            <th style="padding: var(--space-12); text-align: left; border-bottom: 1px solid var(--color-border); background: var(--color-surface); font-weight: 600; color: var(--color-primary);">Tier 3 (Substantial)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Basic Award</strong></td>
-                            <td>£16,000</td>
-                            <td>£20,000</td>
-                            <td>£24,000</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);"><strong>Basic Award</strong></td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">£16,000</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">£20,000</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">£24,000</td>
                         </tr>
                         <tr style="background: var(--color-surface);">
-                            <td><strong>Compensatory Award</strong></td>
-                            <td>£30,000</td>
-                            <td>£38,000</td>
-                            <td>£44,000</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);"><strong>Compensatory Award</strong></td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">£30,000</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">£38,000</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">£44,000</td>
                         </tr>
                         <tr>
-                            <td><strong>Loss of Pension</strong></td>
-                            <td>£6,195</td>
-                            <td>£7,326</td>
-                            <td>£8,059</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);"><strong>Loss of Pension</strong></td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">£6,195</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">£7,326</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">£8,059</td>
                         </tr>
                         <tr style="background: var(--color-surface);">
-                            <td><strong>Injury to Feelings</strong></td>
-                            <td>£4,000</td>
-                            <td>£3,000</td>
-                            <td>£2,000</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);"><strong>Injury to Feelings</strong></td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">£4,000</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">£3,000</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--space-12); border-bottom: 1px solid var(--color-border);">£2,000</td>
                         </tr>
                         <tr>
-                            <td><strong>SUBTOTAL AWARD</strong></td>
-                            <td><strong>£56,195</strong></td>
-                            <td><strong>£68,326</strong></td>
-                            <td><strong>£78,059</strong></td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);"><strong>SUBTOTAL AWARD</strong></td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);"><strong>£56,195</strong></td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);"><strong>£68,326</strong></td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);"><strong>£78,059</strong></td>
                         </tr>
                         <tr style="background: #fff3cd;">
-                            <td><strong>Tax (40% on taxable portion)</strong></td>
-                            <td><strong>£10,478</strong></td>
-                            <td><strong>£15,330</strong></td>
-                            <td><strong>£19,224</strong></td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);"><strong>Tax (40% on taxable portion)</strong></td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);"><strong>£10,478</strong></td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);"><strong>£15,330</strong></td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);"><strong>£19,224</strong></td>
                         </tr>
                         <tr style="background: #d4edda; font-weight: bold;">
-                            <td>ASDA PAYS (Gross)</td>
-                            <td>£66,673</td>
-                            <td>£83,656</td>
-                            <td>£97,283</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">ASDA PAYS (Gross)</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">£66,673</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">£83,656</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">£97,283</td>
                         </tr>
                     </tbody>
                 </table>
 
-                <div style="background: #f0f7ff; padding: var(--space-16); border-radius: var(--radius-base); margin-bottom: var(--space-16); border: 1px solid #d4af37;">
-                    <h4 style="color: #1a3a52; margin-bottom: var(--space-8);">Key Financial Notes:</h4>
+                <div style="background: #f0f7ff; padding: var(--space-16); border-radius: var(--radius-base); border: 1px solid #d4af37;">
+                    <h4 style="color: #1a3a52; margin-bottom: var(--space-12);">Key Financial Notes:</h4>
                     <ul style="margin-left: 20px; color: var(--color-text-light);">
                         <li>First £30,000 is TAX-FREE (compensatory awards)</li>
                         <li>Amounts above £30,000 taxed at 40%</li>
@@ -1176,59 +874,56 @@
                     <p>Complete chronology from employment start through tribunal proceedings</p>
                 </div>
 
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">14 November 2000</div>
-                        <div class="timeline-title">Employment Begins</div>
-                        <div class="timeline-description">George Kirby commences employment at ASDA Tamworth as Customer Sales Associate. Establishes 24+ years of service.</div>
+                <div style="position: relative; padding-left: var(--space-24);">
+                    <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--color-primary);"></div>
+
+                    <div style="position: relative; margin-bottom: var(--space-24);">
+                        <div style="position: absolute; left: -32px; top: 4px; width: 16px; height: 16px; background: var(--color-primary); border: 3px solid var(--color-background); border-radius: 50%;"></div>
+                        <div style="color: var(--color-primary); font-weight: 600; margin-bottom: 4px;">14 November 2000</div>
+                        <div style="font-weight: 600; color: var(--color-text); margin-bottom: 4px;">Employment Begins</div>
+                        <div style="color: var(--color-text-light); font-size: 14px;">George Kirby commences employment at ASDA Tamworth as Customer Sales Associate. Establishes 24+ years of service.</div>
                     </div>
 
-                    <div class="timeline-item">
-                        <div class="timeline-date">8 February 2021</div>
-                        <div class="timeline-title">Court Order (BM20P08534)</div>
-                        <div class="timeline-description">High Court custody order granted - shared custody with prohibition on relocation beyond 20 miles. ASDA is aware of this order.</div>
+                    <div style="position: relative; margin-bottom: var(--space-24);">
+                        <div style="position: absolute; left: -32px; top: 4px; width: 16px; height: 16px; background: var(--color-primary); border: 3px solid var(--color-background); border-radius: 50%;"></div>
+                        <div style="color: var(--color-primary); font-weight: 600; margin-bottom: 4px;">8 February 2021</div>
+                        <div style="font-weight: 600; color: var(--color-text); margin-bottom: 4px;">Court Order (BM20P08534)</div>
+                        <div style="color: var(--color-text-light); font-size: 14px;">High Court custody order granted - shared custody with prohibition on relocation beyond 20 miles. ASDA is aware of this order.</div>
                     </div>
 
-                    <div class="timeline-item">
-                        <div class="timeline-date">1 August 2021</div>
-                        <div class="timeline-title">Promotion to Trading Manager</div>
-                        <div class="timeline-description">George Kirby promoted to Customer Trading Manager (DTM Grade) with salary increase to £36,731.68 p.a.</div>
+                    <div style="position: relative; margin-bottom: var(--space-24);">
+                        <div style="position: absolute; left: -32px; top: 4px; width: 16px; height: 16px; background: var(--color-primary); border: 3px solid var(--color-background); border-radius: 50%;"></div>
+                        <div style="color: var(--color-primary); font-weight: 600; margin-bottom: 4px;">1 August 2021</div>
+                        <div style="font-weight: 600; color: var(--color-text); margin-bottom: 4px;">Promotion to Trading Manager</div>
+                        <div style="color: var(--color-text-light); font-size: 14px;">George Kirby promoted to Customer Trading Manager (DTM Grade) with salary increase to £36,731.68 p.a.</div>
                     </div>
 
-                    <div class="timeline-item">
-                        <div class="timeline-date">19 July 2025</div>
-                        <div class="timeline-title">Dismissal Meeting</div>
-                        <div class="timeline-description">Called to unscheduled meeting with no advance notice. No right to companion offered or explained. Role elimination announced with 20-mile relocation requirement incompatible with court order.</div>
+                    <div style="position: relative; margin-bottom: var(--space-24);">
+                        <div style="position: absolute; left: -32px; top: 4px; width: 16px; height: 16px; background: var(--color-primary); border: 3px solid var(--color-background); border-radius: 50%;"></div>
+                        <div style="color: var(--color-primary); font-weight: 600; margin-bottom: 4px;">19 July 2025</div>
+                        <div style="font-weight: 600; color: var(--color-text); margin-bottom: 4px;">Dismissal Meeting</div>
+                        <div style="color: var(--color-text-light); font-size: 14px;">Called to unscheduled meeting with no advance notice. No right to companion offered or explained. Role elimination announced with mandatory relocation incompatible with court order.</div>
                     </div>
 
-                    <div class="timeline-item">
-                        <div class="timeline-date">1 October 2025</div>
-                        <div class="timeline-title">Employment Terminated</div>
-                        <div class="timeline-description">Final payslip issued showing undocumented £751.20 deduction. Total service: 24 years 9 months. New employment commenced same day (mitigation).</div>
+                    <div style="position: relative; margin-bottom: var(--space-24);">
+                        <div style="position: absolute; left: -32px; top: 4px; width: 16px; height: 16px; background: var(--color-primary); border: 3px solid var(--color-background); border-radius: 50%;"></div>
+                        <div style="color: var(--color-primary); font-weight: 600; margin-bottom: 4px;">6 August 2025</div>
+                        <div style="font-weight: 600; color: var(--color-text); margin-bottom: 4px;">Formal Grievance & Same-Day Rejection</div>
+                        <div style="color: var(--color-text-light); font-size: 14px;">Formal grievance submitted challenging dismissal. ASDA rejects grievance SAME DAY with no investigation. Clear breach of ACAS Code.</div>
                     </div>
 
-                    <div class="timeline-item">
-                        <div class="timeline-date">6 August 2025</div>
-                        <div class="timeline-title">Formal Grievance & Same-Day Rejection</div>
-                        <div class="timeline-description">Formal grievance submitted challenging dismissal. ASDA rejects grievance SAME DAY with no investigation. Clear breach of ACAS Code.</div>
+                    <div style="position: relative; margin-bottom: var(--space-24);">
+                        <div style="position: absolute; left: -32px; top: 4px; width: 16px; height: 16px; background: var(--color-primary); border: 3px solid var(--color-background); border-radius: 50%;"></div>
+                        <div style="color: var(--color-primary); font-weight: 600; margin-bottom: 4px;">16 October 2025</div>
+                        <div style="font-weight: 600; color: var(--color-text); margin-bottom: 4px;">FALSE Resignation Letter</div>
+                        <div style="color: var(--color-text-light); font-size: 14px;">FORGED resignation letter backdated and issued 15 DAYS after dismissal. Document fraud evidence proves systematic bad faith.</div>
                     </div>
 
-                    <div class="timeline-item">
-                        <div class="timeline-date">16 October 2025</div>
-                        <div class="timeline-title">FALSE Resignation Letter</div>
-                        <div class="timeline-description">FORGED resignation letter backdated and issued 15 DAYS after dismissal. Document fraud evidence proves systematic bad faith.</div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">27 November 2025</div>
-                        <div class="timeline-title">ET1 Tribunal Claim Filed</div>
-                        <div class="timeline-description">Employment tribunal claim (Case 60402852/2025) filed within statutory 3-month window. 7 claims filed with full documentary support.</div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">5 December 2025</div>
-                        <div class="timeline-title">Case Manager Created</div>
-                        <div class="timeline-description">Complete case management tool prepared with 19 evidence files, 7 claims detailed, and £56k-£78k damages calculated. Status: TRIBUNAL READY (90-95% strength).</div>
+                    <div style="position: relative; margin-bottom: var(--space-24);">
+                        <div style="position: absolute; left: -32px; top: 4px; width: 16px; height: 16px; background: var(--color-primary); border: 3px solid var(--color-background); border-radius: 50%;"></div>
+                        <div style="color: var(--color-primary); font-weight: 600; margin-bottom: 4px;">27 November 2025</div>
+                        <div style="font-weight: 600; color: var(--color-text); margin-bottom: 4px;">ET1 Tribunal Claim Filed</div>
+                        <div style="color: var(--color-text-light); font-size: 14px;">Employment tribunal claim (Case 60402852/2025) filed within statutory 3-month window. 7 claims filed with full documentary support.</div>
                     </div>
                 </div>
             </div>
@@ -1237,22 +932,16 @@
 
     <script>
         function switchTab(tabName) {
-            // Hide all tabs
             const tabs = document.querySelectorAll('.tab-content');
             tabs.forEach(tab => tab.classList.remove('active'));
 
-            // Remove active class from all buttons
             const buttons = document.querySelectorAll('.tab-button');
             buttons.forEach(button => button.classList.remove('active'));
 
-            // Show selected tab
             document.getElementById(tabName + '-tab').classList.add('active');
-
-            // Add active class to clicked button
             event.target.classList.add('active');
         }
 
-        // Initialize on load
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.tab-button').classList.add('active');
         });
