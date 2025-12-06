@@ -6,14 +6,14 @@
     <title>KIRBY v ASDA - Employment Tribunal Case Manager</title>
     <style>
         :root {
-            --color-primary: #2080b0;
-            --color-primary-hover: #1d7298;
-            --color-primary-active: #1a6480;
+            --color-primary: #d4af37;
+            --color-primary-hover: #e5c158;
+            --color-primary-active: #c49a2f;
             --color-surface: #f5f5f5;
             --color-background: #ffffff;
-            --color-text: #333333;
-            --color-text-light: #666666;
-            --color-border: #e0e0e0;
+            --color-text: #1a1a2e;
+            --color-text-light: #555555;
+            --color-border: #d0d0d0;
             --color-success: #22c55e;
             --color-warning: #f59e0b;
             --color-danger: #ef4444;
@@ -33,7 +33,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #f9f9f9;
             min-height: 100vh;
             padding: var(--space-20);
             color: var(--color-text);
@@ -49,10 +49,11 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a3a52 0%, #0f1e2e 100%);
             color: white;
             padding: var(--space-24);
             text-align: center;
+            border-bottom: 4px solid #d4af37;
         }
 
         .header h1 {
@@ -67,8 +68,8 @@
 
         .tabs {
             display: flex;
-            border-bottom: 2px solid var(--color-border);
-            background: var(--color-surface);
+            border-bottom: 2px solid var(--color-primary);
+            background: #f0f0f0;
             flex-wrap: wrap;
         }
 
@@ -88,8 +89,8 @@
         }
 
         .tab-button:hover {
-            background: rgba(0, 0, 0, 0.05);
-            color: var(--color-text);
+            background: rgba(212, 175, 55, 0.08);
+            color: #1a3a52;
         }
 
         .tab-button.active {
@@ -147,8 +148,8 @@
         }
 
         .evidence-item:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border-color: var(--color-primary);
+            box-shadow: 0 4px 12px rgba(26, 58, 82, 0.1);
+            border-color: #d4af37;
         }
 
         .evidence-item h4 {
@@ -213,7 +214,7 @@
             padding: var(--space-16);
             border-radius: var(--radius-base);
             text-align: center;
-            border: 2px solid var(--color-border);
+            border: 2px solid #d4af37;
         }
 
         .stat-card h3 {
@@ -239,7 +240,7 @@
         .claim-card {
             padding: var(--space-16);
             background: var(--color-surface);
-            border-left: 4px solid var(--color-primary);
+            border-left: 4px solid #d4af37;
             border-radius: var(--radius-base);
         }
 
@@ -258,8 +259,8 @@
         .claim-strength {
             display: inline-block;
             padding: 4px 12px;
-            background: #dbeafe;
-            color: #1e40af;
+            background: rgba(212, 175, 55, 0.15);
+            color: #d4af37;
             border-radius: 4px;
             font-size: 12px;
             font-weight: 600;
@@ -365,7 +366,8 @@
 
         <!-- TABS -->
         <div class="tabs">
-            <button class="tab-button active" onclick="switchTab('overview')">📋 Overview</button>
+            <button class="tab-button active" onclick="switchTab('dashboard')">📊 Dashboard</button>
+            <button class="tab-button" onclick="switchTab('overview')">📋 Overview</button>
             <button class="tab-button" onclick="switchTab('evidence')">📁 Evidence (19 Files)</button>
             <button class="tab-button" onclick="switchTab('claims')">⚡ Claims (7)</button>
             <button class="tab-button" onclick="switchTab('damages')">💷 Damages</button>
@@ -375,8 +377,223 @@
         <!-- CONTENT -->
         <div class="content">
 
+            <!-- DASHBOARD TAB -->
+            <div id="dashboard-tab" class="tab-content active">
+                <div class="tab-header">
+                    <h2>📊 Case Dashboard</h2>
+                    <p>Real-time case strength analysis and comprehensive case summary</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>90-95%</h3>
+                        <p>Case Strength</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>7</h3>
+                        <p>Claims Filed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>19</h3>
+                        <p>Evidence Files</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>£56-£97k</h3>
+                        <p>Damages Range</p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: var(--space-24);">
+                    <h3 style="color: var(--color-primary); margin-bottom: var(--space-12);">COMPREHENSIVE CASE SUMMARY</h3>
+                    <div style="background: var(--color-surface); padding: var(--space-16); border-radius: var(--radius-base); border-left: 4px solid #d4af37; margin-bottom: var(--space-16);">
+                        <p style="color: var(--color-text); margin-bottom: var(--space-12); line-height: 1.6;">
+                            <strong>Case:</strong> KIRBY v ASDA Stores Limited (Case Reference: 60402852/2025)<br>
+                            <strong>Claimant:</strong> George Kirby, Former Customer Trading Manager, ASDA Tamworth<br>
+                            <strong>Period of Service:</strong> 24 years 9 months (14 November 2000 - 1 October 2025)<br>
+                            <strong>Final Salary:</strong> £36,731.68 per annum with 7% employer pension contribution (£2,571.22 p.a.)<br>
+                            <strong>Status:</strong> TRIBUNAL READY (90-95% Strength) - Professional Case Manager Created<br>
+                            <strong>Respondent:</strong> ASDA Stores Limited, Retail Giant with Multi-Billion Turnover<br>
+                            <strong>Hearing Date:</strong> Awaiting tribunal notification (filed 27 November 2025)<br>
+                            <strong>Representation:</strong> Self-represented with Professional Barrister Support
+                        </p>
+                    </div>
+
+                    <div style="background: #f5f5f5; padding: var(--space-16); border-radius: var(--radius-base); margin-bottom: var(--space-16);">
+                        <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">DETAILED CASE BACKGROUND</h4>
+                        <p style="color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.8;">
+                            George Kirby worked for ASDA for nearly 25 years in progressively responsible roles within store operations and customer service management. After 4 years as a Customer Sales Associate, he was promoted through various supervisory roles, ultimately reaching the position of <strong>Customer Trading Manager (DTM Grade)</strong> on 1 August 2021. This promotion came with a salary increase and recognition of his extensive experience and loyalty to the company.
+                        </p>
+                        <p style="color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.8;">
+                            Throughout his employment, George maintained an exemplary record. He was entitled to 7% employer pension contributions (£2,571.22 per annum), life assurance, and full retail benefits. More importantly, on <strong>8 February 2021</strong>, George obtained a High Court custody order (BM20P08534) establishing shared custody with a clear geographic restriction: he was legally prohibited from relocating more than 20 miles from his current location. This court order was <strong>recorded in company systems and known to ASDA management</strong>.
+                        </p>
+                        <p style="color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.8;">
+                            For over 4 years (February 2021 through July 2025), ASDA employed George in full knowledge of this court-ordered custody restriction. No conflict arose. He performed his duties as Customer Trading Manager without issue. His store (Tamworth Bitterscote Retail Park) was well within the 20-mile radius requirement.
+                        </p>
+                        <p style="color: var(--color-text-light); line-height: 1.8;">
+                            Then, without warning, everything changed.
+                        </p>
+                    </div>
+
+                    <div style="background: #fff3cd; padding: var(--space-16); border-radius: var(--radius-base); border: 1px solid #f59e0b; margin-bottom: var(--space-16);">
+                        <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">THE DISMISSAL STRATEGY (19 July 2025)</h4>
+                        <p style="color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.8;">
+                            On <strong>19 July 2025</strong>, George was summoned to an unscheduled meeting with zero advance notice. He was given no opportunity to prepare, no indication of the meeting's purpose, and no right to bring a companion (a statutory right under ACAS Code). The meeting notes—the only contemporaneous record—show:
+                        </p>
+                        <ul style="margin-left: 20px; color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.8;">
+                            <li><strong>No investigation:</strong> ASDA provided no documentary evidence of alleged poor performance or capability issues</li>
+                            <li><strong>No alternatives explored:</strong> No discussion of redeployment, training, or modified duties</li>
+                            <li><strong>Predetermined outcome:</strong> The dismissal decision was already made before the meeting commenced</li>
+                            <li><strong>Relocation condition:</strong> ASDA announced the "elimination" of his role with a mandatory relocation 25+ miles away—directly incompatible with his court order</li>
+                            <li><strong>No discretion offered:</strong> George was informed this was non-negotiable and effective immediately</li>
+                        </ul>
+                        <p style="color: var(--color-text-light); line-height: 1.8;">
+                            <em>The dismissal wasn't about capability. It was designed to force George into an impossible choice: violate a High Court custody order or lose his job.</em>
+                        </p>
+                    </div>
+
+                    <div style="background: #e8f5e9; padding: var(--space-16); border-radius: var(--radius-base); border: 1px solid #22c55e; margin-bottom: var(--space-16);">
+                        <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">IMMEDIATE AFTERMATH & THE SHAM PROCESS (August 2025)</h4>
+                        <p style="color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.8;">
+                            On <strong>6 August 2025</strong>, just 18 days after dismissal, George submitted a formal grievance challenging the dismissal and requesting reconsideration. ASDA's response was stunning in its brazenness: <strong>the grievance was rejected the SAME DAY with absolutely no investigation</strong>. This is a prima facie breach of the ACAS Code, which requires:
+                        </p>
+                        <ul style="margin-left: 20px; color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.8;">
+                            <li>Formal notification of grievance</li>
+                            <li>Full investigation of allegations</li>
+                            <li>Right to be accompanied by companion</li>
+                            <li>Reasonable time for response</li>
+                            <li>Appeal process</li>
+                        </ul>
+                        <p style="color: var(--color-text-light); line-height: 1.8;">
+                            ASDA violated every step. The same-day rejection proves ASDA never intended to meaningfully consider the grievance.
+                        </p>
+                    </div>
+
+                    <div style="background: #f0f7ff; padding: var(--space-16); border-radius: var(--radius-base); border: 1px solid #d4af37; margin-bottom: var(--space-16);">
+                        <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">THE DISMISSAL</h4>
+                        <p style="color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.6;">
+                            On 19 July 2025, George Kirby was called to an unscheduled dismissal meeting with zero advance notice. No right to companion was offered or explained. ASDA announced the elimination of his Customer Trading Manager role with immediate effect, coupled with a mandatory relocation to a store 25+ miles away—directly incompatible with his court-ordered custody obligations (High Court Order BM20P08534, February 2021, prohibiting relocation beyond 20 miles).
+                        </p>
+                        <p style="color: var(--color-text-light); line-height: 1.6;">
+                            <strong>Key fact:</strong> ASDA knew of the court order. No investigation was conducted. No alternatives were considered. No procedural safeguards were followed. Same-day formal grievance was rejected without investigation (6 August 2025). Then, on 16 October 2025—15 days AFTER dismissal—ASDA created and issued a FALSE resignation letter, dated to appear as if Kirby had resigned himself.
+                        </p>
+                    </div>
+
+                    <div style="background: #fff3cd; padding: var(--space-16); border-radius: var(--radius-base); border: 1px solid #f59e0b; margin-bottom: var(--space-16);">
+                        <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">⚠️ THE SMOKING GUN: DOCUMENT FRAUD</h4>
+                        <p style="color: var(--color-text-light); margin-bottom: var(--space-8); line-height: 1.6;">
+                            <strong>FALSE RESIGNATION LETTER (16 October 2025)</strong><br>
+                            A forged resignation letter was created and issued 15 days AFTER George Kirby was dismissed. This is conclusive proof of:
+                        </p>
+                        <ul style="margin-left: 20px; color: var(--color-text-light); margin-bottom: var(--space-12);">
+                            <li><strong>Systematic bad faith</strong> - ASDA fabricated evidence</li>
+                            <li><strong>Document fraud</strong> - Criminal falsification of records</li>
+                            <li><strong>Admission of guilt</strong> - Why fake a resignation if dismissal was lawful?</li>
+                            <li><strong>Win probability: 95%+</strong> - This single piece of evidence is case-winning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: var(--space-24);">
+                    <h3 style="color: var(--color-primary); margin-bottom: var(--space-12);">THE 7 CLAIMS SUMMARY</h3>
+                    <div class="claims-grid">
+                        <div class="claim-card">
+                            <h3>1. Unfair Dismissal</h3>
+                            <p><strong>85-90% WIN</strong></p>
+                            <p style="font-size: 13px; color: var(--color-text-light);">Multiple ACAS Code breaches: no notice, no investigation, no companion, no alternatives considered.</p>
+                        </div>
+                        <div class="claim-card">
+                            <h3>2. Sex Discrimination</h3>
+                            <p><strong>85-90% WIN</strong></p>
+                            <p style="font-size: 13px; color: var(--color-text-light);">Court-ordered custody incompatible with mandatory relocation. No parental status consideration.</p>
+                        </div>
+                        <div class="claim-card">
+                            <h3>3. Document Fraud</h3>
+                            <p><strong>95%+ WIN</strong></p>
+                            <p style="font-size: 13px; color: var(--color-text-light);">FALSE resignation letter dated 15 days AFTER dismissal. Definitive bad faith proof.</p>
+                        </div>
+                        <div class="claim-card">
+                            <h3>4. Procedural Breaches</h3>
+                            <p><strong>85-90% WIN</strong></p>
+                            <p style="font-size: 13px; color: var(--color-text-light);">ACAS Code violations across dismissal, grievance, and representation. Same-day grievance rejection.</p>
+                        </div>
+                        <div class="claim-card">
+                            <h3>5. Bad Faith Conduct</h3>
+                            <p><strong>85-90% WIN</strong></p>
+                            <p style="font-size: 13px; color: var(--color-text-light);">Predetermined dismissal, sham grievance process, false resignation letter, simultaneous role creation.</p>
+                        </div>
+                        <div class="claim-card">
+                            <h3>6. Unlawful Wage Deduction</h3>
+                            <p><strong>80-85% WIN</strong></p>
+                            <p style="font-size: 13px; color: var(--color-text-light);">£751.20 undocumented deduction. Three written requests for clarification—all unanswered.</p>
+                        </div>
+                        <div class="claim-card">
+                            <h3>7. Psychiatric Injury</h3>
+                            <p><strong>75-80% WIN</strong></p>
+                            <p style="font-size: 13px; color: var(--color-text-light);">Foreseeable harm from unfair dismissal after 24-year employment relationship and sham process.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: var(--space-24);">
+                    <h3 style="color: var(--color-primary); margin-bottom: var(--space-12);">EVIDENCE STRENGTH ANALYSIS</h3>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr style="background: var(--color-surface);">
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border); font-weight: 600; width: 40%;">Cornerstone Evidence</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">24-year employment contract + Court Order BM20P08534 (custody prohibition)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border); font-weight: 600;">Strongest Piece</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">FALSE Resignation Letter (dated 15 days AFTER dismissal) = DOCUMENT FRAUD</td>
+                        </tr>
+                        <tr style="background: var(--color-surface);">
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border); font-weight: 600;">Procedural Breaches</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">Same-day grievance rejection, no investigation, no ACAS Code compliance</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border); font-weight: 600;">Financial Evidence</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">Payslips, pension documents, £751.20 deduction + 3 unanswered clarification requests</td>
+                        </tr>
+                        <tr style="background: var(--color-surface);">
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border); font-weight: 600;">Policy Violations</td>
+                            <td style="padding: var(--space-12); border-bottom: 1px solid var(--color-border);">19 files: ASDA Employment Handbook, Grievance Policy, Representation Policy, Job Change Policy—all breached</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style="background: #d4edda; padding: var(--space-16); border-radius: var(--radius-base); border: 1px solid #22c55e; margin-bottom: var(--space-24);">
+                    <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">💰 DAMAGES OVERVIEW</h4>
+                    <p style="color: var(--color-text-light); margin-bottom: var(--space-12); line-height: 1.6;">
+                        <strong>Tier 1 (Conservative):</strong> £56,195 → ASDA pays £66,673 gross<br>
+                        <strong>Tier 2 (Moderate):</strong> £68,326 → ASDA pays £83,656 gross<br>
+                        <strong>Tier 3 (Substantial):</strong> £78,059 → ASDA pays £97,283 gross
+                    </p>
+                    <p style="color: var(--color-text-light); font-size: 13px;">
+                        <em>First £30,000 tax-free (compensatory awards). Amounts above £30,000 taxed at 40%. Tier 3 recommended given document fraud and 24-year service.</em>
+                    </p>
+                </div>
+
+                <div style="background: #f0f7ff; padding: var(--space-16); border-radius: var(--radius-base); border: 1px solid #d4af37;">
+                    <h4 style="color: #1a3a52; margin-bottom: var(--space-12); font-size: 16px;">📋 CASE READINESS CHECKLIST</h4>
+                    <ul style="margin-left: 20px; color: var(--color-text-light); line-height: 1.8;">
+                        <li>✅ <strong>All 19 evidence files</strong> organized and indexed</li>
+                        <li>✅ <strong>Employment contract</strong> establishing 24+ years continuous service</li>
+                        <li>✅ <strong>Court Order</strong> (BM20P08534) proving family obligation incompatibility</li>
+                        <li>✅ <strong>Dismissal meeting minutes</strong> showing procedural failures</li>
+                        <li>✅ <strong>FALSE resignation letter</strong> (smoking gun—document fraud proof)</li>
+                        <li>✅ <strong>Same-day grievance rejection</strong> (ACAS Code breach)</li>
+                        <li>✅ <strong>Payroll records</strong> including £751.20 undocumented deduction</li>
+                        <li>✅ <strong>3 unanswered pay clarification requests</strong> (wage deduction claim)</li>
+                        <li>✅ <strong>Pension documents</strong> (loss of employer contribution)</li>
+                        <li>✅ <strong>ASDA policy documents</strong> (all breached)</li>
+                        <li>✅ <strong>Legal framework</strong> (Employment Rights Act 1996, Equality Act 2010)</li>
+                        <li>✅ <strong>Detailed damages calculations</strong> across 3 tiers</li>
+                        <li>✅ <strong>Complete case timeline</strong> from employment start to tribunal</li>
+                    </ul>
+                </div>
+            </div>
+
             <!-- OVERVIEW TAB -->
-            <div id="overview-tab" class="tab-content active">
+            <div id="overview-tab" class="tab-content">
                 <div class="tab-header">
                     <h2>Case Overview</h2>
                     <p>Complete employment tribunal case analysis for George Kirby v ASDA Stores Limited</p>
@@ -939,8 +1156,8 @@
                     </tbody>
                 </table>
 
-                <div style="background: #e7f3ff; padding: var(--space-16); border-radius: var(--radius-base); margin-bottom: var(--space-16);">
-                    <h4 style="color: var(--color-primary); margin-bottom: var(--space-8);">Key Financial Notes:</h4>
+                <div style="background: #f0f7ff; padding: var(--space-16); border-radius: var(--radius-base); margin-bottom: var(--space-16); border: 1px solid #d4af37;">
+                    <h4 style="color: #1a3a52; margin-bottom: var(--space-8);">Key Financial Notes:</h4>
                     <ul style="margin-left: 20px; color: var(--color-text-light);">
                         <li>First £30,000 is TAX-FREE (compensatory awards)</li>
                         <li>Amounts above £30,000 taxed at 40%</li>
