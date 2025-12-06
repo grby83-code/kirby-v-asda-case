@@ -1,7 +1,57 @@
-documents/
-!documents/.gitkeep
+# .gitignore
+# Standard Git ignore patterns for KIRBY v ASDA tribunal case
+
+# Operating System Files
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor Files
 .vscode/
 .idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# IDE Directories
+.eclipse/
+.netbeans/
+nbproject/
+
+# Local environment
+.env
+.env.local
+*.local
+
+# Build/Cache
 node_modules/
+*.cache
+dist/
+build/
+
+# System Files
+._*
+.Spotlight-V100
+.Trashes
+
+# Temporary Files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# OS-specific
+Thumbs.db
+ehthumbs.db
+
+# Keep these files - important case documents
+!index.html
+!README.md
+!EVIDENCE_GUIDE.md
+!LEGAL_BASIS.md
+!.gitignore
+
+# Sensitive files (if any confidential docs added, list them here)
+# Example: confidential/*.pdf
